@@ -47,7 +47,7 @@ void pwdReDir(char *destination){
 void wc(char *wcPath){
 	pid_t pid;
 //	int fd = open("/cise/homes/ngarg/OS/ng38-s-bathroom/shell/action.y", O_RDONLY);
-	int fd = open("/home/will/OS/shell/action.y", O_RDONLY);
+	int fd = open(wcPath, O_RDONLY);
 	close(0);
         dup(fd);
 	close(fd);

@@ -1923,19 +1923,19 @@ yyreduce:
 
   case 105:
 #line 177 "action.y" /* yacc.c:1646  */
-    { printf("ls path path > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1928 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 106:
 #line 178 "action.y" /* yacc.c:1646  */
-    { printf("ls path path > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1934 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 107:
 #line 179 "action.y" /* yacc.c:1646  */
-    { printf("ls path path > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1940 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1947,19 +1947,19 @@ yyreduce:
 
   case 109:
 #line 182 "action.y" /* yacc.c:1646  */
-    { printf("ls path path1 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1952 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 110:
 #line 183 "action.y" /* yacc.c:1646  */
-    { printf("ls path path1 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1958 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 111:
 #line 184 "action.y" /* yacc.c:1646  */
-    { printf("ls path path1 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1964 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1971,19 +1971,19 @@ yyreduce:
 
   case 113:
 #line 187 "action.y" /* yacc.c:1646  */
-    { printf("ls path path2 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1976 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 114:
 #line 188 "action.y" /* yacc.c:1646  */
-    { printf("ls path path2 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1982 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 115:
 #line 189 "action.y" /* yacc.c:1646  */
-    { printf("ls path path2 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1988 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1995,19 +1995,19 @@ yyreduce:
 
   case 117:
 #line 192 "action.y" /* yacc.c:1646  */
-    { printf("ls path path3 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2000 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 118:
 #line 193 "action.y" /* yacc.c:1646  */
-    { printf("ls path path3 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2006 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 119:
 #line 194 "action.y" /* yacc.c:1646  */
-    { printf("ls path path3 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2012 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -2019,19 +2019,19 @@ yyreduce:
 
   case 121:
 #line 197 "action.y" /* yacc.c:1646  */
-    { printf("ls path path4 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2024 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 122:
 #line 198 "action.y" /* yacc.c:1646  */
-    { printf("ls path path4 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2030 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 123:
 #line 199 "action.y" /* yacc.c:1646  */
-    { printf("ls path path4 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2036 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -2043,19 +2043,19 @@ yyreduce:
 
   case 125:
 #line 202 "action.y" /* yacc.c:1646  */
-    { printf("ls path path5 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2048 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 126:
 #line 203 "action.y" /* yacc.c:1646  */
-    { printf("ls path path5 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2054 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 127:
 #line 204 "action.y" /* yacc.c:1646  */
-    { printf("ls path path5 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2060 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -2067,19 +2067,19 @@ yyreduce:
 
   case 129:
 #line 207 "action.y" /* yacc.c:1646  */
-    { printf("ls path path6 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2072 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 130:
 #line 208 "action.y" /* yacc.c:1646  */
-    { printf("ls path path6 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2078 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 131:
 #line 209 "action.y" /* yacc.c:1646  */
-    { printf("ls path path6 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2084 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -2091,19 +2091,19 @@ yyreduce:
 
   case 133:
 #line 212 "action.y" /* yacc.c:1646  */
-    { printf("ls path path7 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2096 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 134:
 #line 213 "action.y" /* yacc.c:1646  */
-    { printf("ls path path7 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2102 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 135:
 #line 214 "action.y" /* yacc.c:1646  */
-    { printf("ls path path7 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2108 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -2115,19 +2115,19 @@ yyreduce:
 
   case 137:
 #line 217 "action.y" /* yacc.c:1646  */
-    { printf("ls path path8 > alpha"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2120 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 138:
 #line 218 "action.y" /* yacc.c:1646  */
-    { printf("ls path path8 > variable"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2126 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 139:
 #line 219 "action.y" /* yacc.c:1646  */
-    { printf("ls path path8 > path"); }
+    { ls_two_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 2132 "y.tab.c" /* yacc.c:1646  */
     break;
 

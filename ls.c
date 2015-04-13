@@ -82,10 +82,10 @@ void ls_two_path_redirect(char *outFile, char *path1, char *path2){
 
         dup2(fd2, 1);   // make stdout go to file
 
-        char *lsRePath = get_current_dir_name();
-        char *params[] =  { "/bin/ls", NULL, path2, NULL};
+        char *lsRePath2 = get_current_dir_name();
+        char *params2[] =  { "/bin/ls", NULL, path2, NULL};
 
-        execv("/bin/ls", params);
+        execv("/bin/ls", params2);
 
 	
 }

@@ -1,7 +1,12 @@
+setenv newVar Test
+hello
 pwd
 ls -al
-pwd
-ls -al
+alias abc "ls -al"
 cd ~
-ls -al
-pwd
+alias show "pwd"
+abc
+printenv
+show
+alias
+bye
