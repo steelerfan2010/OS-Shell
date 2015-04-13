@@ -1,0 +1,7 @@
+pwd
+ls -al
+pwd
+ls -al
+cd ~
+ls -al
+pwd
