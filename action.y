@@ -174,49 +174,49 @@ ls: /*ANYTHING WITH IOTOKEN IN IT REPRESENTS I/O*/
 	
 	/*ls with 2 paths*/
 	| LS ALPHANUMERIC ALPHANUMERIC { ls_two_path($<str>2, $<str>3); }
-	| LS ALPHANUMERIC ALPHANUMERIC IOTOKEN ALPHANUMERIC { printf("ls path path > alpha"); }
-	| LS ALPHANUMERIC ALPHANUMERIC IOTOKEN VARIABLE { printf("ls path path > variable"); }
-	| LS ALPHANUMERIC ALPHANUMERIC IOTOKEN PATH { printf("ls path path > path"); }
+	| LS ALPHANUMERIC ALPHANUMERIC IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS ALPHANUMERIC ALPHANUMERIC IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS ALPHANUMERIC ALPHANUMERIC IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS ALPHANUMERIC VARIABLE	{ ls_two_path($<str>2, $<str>3); }
-	| LS ALPHANUMERIC VARIABLE IOTOKEN ALPHANUMERIC { printf("ls path path1 > alpha"); }
-	| LS ALPHANUMERIC VARIABLE IOTOKEN VARIABLE { printf("ls path path1 > variable"); }
-	| LS ALPHANUMERIC VARIABLE IOTOKEN PATH { printf("ls path path1 > path"); }
+	| LS ALPHANUMERIC VARIABLE IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS ALPHANUMERIC VARIABLE IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS ALPHANUMERIC VARIABLE IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS ALPHANUMERIC PATH	{ ls_two_path($<str>2, $<str>3); }
-	| LS ALPHANUMERIC PATH IOTOKEN ALPHANUMERIC { printf("ls path path2 > alpha"); }
-	| LS ALPHANUMERIC PATH IOTOKEN VARIABLE { printf("ls path path2 > variable"); }
-	| LS ALPHANUMERIC PATH IOTOKEN PATH { printf("ls path path2 > path"); }
+	| LS ALPHANUMERIC PATH IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS ALPHANUMERIC PATH IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS ALPHANUMERIC PATH IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS VARIABLE ALPHANUMERIC	{ ls_two_path($<str>2, $<str>3);}
-	| LS VARIABLE ALPHANUMERIC IOTOKEN ALPHANUMERIC { printf("ls path path3 > alpha"); }
-	| LS VARIABLE ALPHANUMERIC IOTOKEN VARIABLE { printf("ls path path3 > variable"); }
-	| LS VARIABLE ALPHANUMERIC IOTOKEN PATH { printf("ls path path3 > path"); }
+	| LS VARIABLE ALPHANUMERIC IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS VARIABLE ALPHANUMERIC IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS VARIABLE ALPHANUMERIC IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS VARIABLE VARIABLE	{ ls_two_path($<str>2, $<str>3); }
-	| LS VARIABLE VARIABLE IOTOKEN ALPHANUMERIC { printf("ls path path4 > alpha"); }
-	| LS VARIABLE VARIABLE IOTOKEN VARIABLE { printf("ls path path4 > variable"); }
-	| LS VARIABLE VARIABLE IOTOKEN PATH { printf("ls path path4 > path"); }
+	| LS VARIABLE VARIABLE IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS VARIABLE VARIABLE IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS VARIABLE VARIABLE IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS VARIABLE PATH	{ ls_two_path($<str>2, $<str>3); }
-	| LS VARIABLE PATH IOTOKEN ALPHANUMERIC { printf("ls path path5 > alpha"); }
-	| LS VARIABLE PATH IOTOKEN VARIABLE { printf("ls path path5 > variable"); }
-	| LS VARIABLE PATH IOTOKEN PATH { printf("ls path path5 > path"); }
+	| LS VARIABLE PATH IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS VARIABLE PATH IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS VARIABLE PATH IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS PATH ALPHANUMERIC	{ ls_two_path($<str>2, $<str>3); }
-	| LS PATH ALPHANUMERIC IOTOKEN ALPHANUMERIC { printf("ls path path6 > alpha"); }
-	| LS PATH ALPHANUMERIC IOTOKEN VARIABLE { printf("ls path path6 > variable"); }
-	| LS PATH ALPHANUMERIC IOTOKEN PATH { printf("ls path path6 > path"); }
+	| LS PATH ALPHANUMERIC IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS PATH ALPHANUMERIC IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS PATH ALPHANUMERIC IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS PATH VARIABLE	{ ls_two_path($<str>2, $<str>3); }
-	| LS PATH VARIABLE IOTOKEN ALPHANUMERIC { printf("ls path path7 > alpha"); }
-	| LS PATH VARIABLE IOTOKEN VARIABLE { printf("ls path path7 > variable"); }
-	| LS PATH VARIABLE IOTOKEN PATH { printf("ls path path7 > path"); }
+	| LS PATH VARIABLE IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS PATH VARIABLE IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS PATH VARIABLE IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	| LS PATH PATH	{ ls_two_path($<str>2, $<str>3); }
-	| LS PATH PATH IOTOKEN ALPHANUMERIC { printf("ls path path8 > alpha"); }
-	| LS PATH PATH IOTOKEN VARIABLE { printf("ls path path8 > variable"); }
-	| LS PATH PATH IOTOKEN PATH { printf("ls path path8 > path"); }
+	| LS PATH PATH IOTOKEN ALPHANUMERIC { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS PATH PATH IOTOKEN VARIABLE { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS PATH PATH IOTOKEN PATH { ls_two_path_redirect($<str>5, $<str>2, $<str>3); }
 	
 	;
 
