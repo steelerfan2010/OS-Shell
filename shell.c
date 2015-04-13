@@ -1,5 +1,7 @@
 #include "shell.h"
 
+int interactive;
+
 int main(void){
    	int bytes_read;
         int nbytes = 100;
@@ -27,10 +29,23 @@ int main(void){
 
 	int j = 0;
 */
-	while(4){
-                printf("NG38: ");
-                yyparse();
-                printf("\n");
+
+	interactive = isatty(fileno(stdin)) && isatty(fileno(stdout));
+
+	if(interactive){
+
+		while(4){
+			printf("NG38: ");
+			yyparse();
+			printf("\n");
+		}
+
+	}
+
+	else{
+		while(4){
+			yyparse();
+		}
 	}
   
       return 0;

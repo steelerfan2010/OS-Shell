@@ -16,6 +16,12 @@ pwd		return PWD;
 wc		return WC;
 alias		return ALIAS;
 unalias		return UNALIAS;
+
+<<EOF>>	{
+	printf("\n");
+	exit(0);
+	}
+
 [><&!|]+			return IOTOKEN;
 
 [A-Za-z0-9]+ 	{
