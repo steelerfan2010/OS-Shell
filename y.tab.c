@@ -1791,55 +1791,55 @@ yyreduce:
 
   case 83:
 #line 150 "action.y" /* yacc.c:1646  */
-    { printf("ls option path1 > alpha"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1796 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 84:
 #line 151 "action.y" /* yacc.c:1646  */
-    { printf("ls option path1 > variable"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1802 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 85:
 #line 152 "action.y" /* yacc.c:1646  */
-    { printf("ls option path1 > path"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1808 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 86:
 #line 153 "action.y" /* yacc.c:1646  */
-    { printf("ls option path2 > alpha"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1814 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 87:
 #line 154 "action.y" /* yacc.c:1646  */
-    { printf("ls option path2 > variable"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1820 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 88:
 #line 155 "action.y" /* yacc.c:1646  */
-    { printf("ls option path2 > path"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1826 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 89:
 #line 156 "action.y" /* yacc.c:1646  */
-    { printf("ls option path3 > alpha"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1832 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 90:
 #line 157 "action.y" /* yacc.c:1646  */
-    { printf("ls option path3 > variable"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1838 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 91:
 #line 158 "action.y" /* yacc.c:1646  */
-    { printf("ls option path3 > path"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-3].str), (yyvsp[-2].str)); }
 #line 1844 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1863,55 +1863,55 @@ yyreduce:
 
   case 95:
 #line 165 "action.y" /* yacc.c:1646  */
-    { printf("ls path option1 > alpha"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1868 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 96:
 #line 166 "action.y" /* yacc.c:1646  */
-    { printf("ls path option1 > variable"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1874 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 97:
 #line 167 "action.y" /* yacc.c:1646  */
-    { printf("ls path option1 > path"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1880 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 98:
 #line 168 "action.y" /* yacc.c:1646  */
-    { printf("ls path option2 > alpha"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1886 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 99:
 #line 169 "action.y" /* yacc.c:1646  */
-    { printf("ls path option2 > variable"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1892 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 100:
 #line 170 "action.y" /* yacc.c:1646  */
-    { printf("ls path option2 > path"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1898 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 101:
 #line 171 "action.y" /* yacc.c:1646  */
-    { printf("ls path option3 > alpha"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1904 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 102:
 #line 172 "action.y" /* yacc.c:1646  */
-    { printf("ls path option3 > variable"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1910 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 103:
 #line 173 "action.y" /* yacc.c:1646  */
-    { printf("ls path option3 > path"); }
+    { ls_one_opt_one_path_redirect((yyvsp[0].str), (yyvsp[-2].str), (yyvsp[-3].str)); }
 #line 1916 "y.tab.c" /* yacc.c:1646  */
     break;
 

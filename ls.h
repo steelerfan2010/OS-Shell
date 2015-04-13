@@ -13,6 +13,7 @@ void ls_one_opt_redirect(char *outFile, char *opt);
 void ls_one_opt_one_path_redirect(char *outFile, char *opt, char *path);
 void ls_one_opt(const char *option);
 void ls_two_opt(char *option1, char *option2);
+void ls_two_path_redirect(char *outFile, char *path1, char *path2);
 void ls_path(char *lsPath);
 void ls_one_opt_one_path(char *option, char *path);
 void ls_one_path_one_opt(char *path, char *option);

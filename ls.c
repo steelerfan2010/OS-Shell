@@ -68,6 +68,28 @@ void ls_one_opt(const char *option){
         }
 }
 
+void ls_two_path_redirect(char *outFile, char *path1, char *path2){
+	 int fd = open(outFile, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+
+        dup2(fd, 1);   // make stdout go to file
+
+        char *lsRePath = get_current_dir_name();
+        char *params[] =  { "/bin/ls", NULL, path1, NULL};
+
+        execv("/bin/ls", params);
+
+	 int fd2 = open(outFile, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+
+        dup2(fd2, 1);   // make stdout go to file
+
+        char *lsRePath = get_current_dir_name();
+        char *params[] =  { "/bin/ls", NULL, path2, NULL};
+
+        execv("/bin/ls", params);
+
+	
+}
+
 void ls_two_opt(char *option1, char *option2){
 	
 	int i =0;

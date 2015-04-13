@@ -148,7 +148,7 @@ ls: /*ANYTHING WITH IOTOKEN IN IT REPRESENTS I/O*/
 	| LS OPTION PATH { ls_one_opt_one_path($<str>2, $<str>3); }
 	
 	| LS OPTION ALPHANUMERIC IOTOKEN ALPHANUMERIC { ls_one_opt_one_path_redirect($<str>5, $<str>2, $<str>3); }
-	| LS OPTION ALPHANUMERIC IOTOKEN VARIABLE { printf(ls_one_opt_one_path_redirect($<str>5, $<str>2, $<str>3); }
+	| LS OPTION ALPHANUMERIC IOTOKEN VARIABLE { ls_one_opt_one_path_redirect($<str>5, $<str>2, $<str>3); } 
 	| LS OPTION ALPHANUMERIC IOTOKEN PATH { ls_one_opt_one_path_redirect($<str>5, $<str>2, $<str>3); }
 	| LS OPTION VARIABLE IOTOKEN ALPHANUMERIC { ls_one_opt_one_path_redirect($<str>5, $<str>2, $<str>3); }
 	| LS OPTION VARIABLE IOTOKEN VARIABLE { ls_one_opt_one_path_redirect($<str>5, $<str>2, $<str>3); }
