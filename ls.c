@@ -42,6 +42,18 @@ void ls_one_opt_redirect(char *outFile, char *option){
 
 }
 
+void ls_one_opt_one_path_redirect(char *outFile, char *option, char *path){
+	 int fd = open(outFile, O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+
+        dup2(fd, 1);   // make stdout go to file
+
+        char *lsRePath = get_current_dir_name();
+        char *params[] =  { "/bin/ls", option, path, NULL};
+
+        execv("/bin/ls", params);
+
+}
+
 void ls_one_opt(const char *option){
 	pid_t pid;
         char *lsPath = get_current_dir_name();
