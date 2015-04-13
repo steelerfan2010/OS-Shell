@@ -10,6 +10,7 @@ char lsUse[100];
 void ls();
 void ls_reDirect(char *outFile);
 void ls_one_opt_redirect(char *outFile, char *opt);
+void ls_one_opt_one_path_redirect(char *outFile, char *opt, char *path);
 void ls_one_opt(const char *option);
 void ls_two_opt(char *option1, char *option2);
 void ls_path(char *lsPath);
