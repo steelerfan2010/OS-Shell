@@ -147,30 +147,30 @@ ls: /*ANYTHING WITH IOTOKEN IN IT REPRESENTS I/O*/
 	| LS OPTION VARIABLE { ls_one_opt_one_path($<str>2, $<str>3); }
 	| LS OPTION PATH { ls_one_opt_one_path($<str>2, $<str>3); }
 	
-	| LS OPTION ALPHANUMERIC IOTOKEN ALPHANUMERIC { printf("ls option path1 > alpha"); }
-	| LS OPTION ALPHANUMERIC IOTOKEN VARIABLE { printf("ls option path1 > variable"); }
-	| LS OPTION ALPHANUMERIC IOTOKEN PATH { printf("ls option path1 > path"); }
-	| LS OPTION VARIABLE IOTOKEN ALPHANUMERIC { printf("ls option path2 > alpha"); }
-	| LS OPTION VARIABLE IOTOKEN VARIABLE { printf("ls option path2 > variable"); }
-	| LS OPTION VARIABLE IOTOKEN PATH { printf("ls option path2 > path"); }
-	| LS OPTION PATH IOTOKEN ALPHANUMERIC { printf("ls option path3 > alpha"); }
-	| LS OPTION PATH IOTOKEN VARIABLE { printf("ls option path3 > variable"); }
-	| LS OPTION PATH IOTOKEN PATH { printf("ls option path3 > path"); }
+	| LS OPTION ALPHANUMERIC IOTOKEN ALPHANUMERIC { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION ALPHANUMERIC IOTOKEN VARIABLE { printf(ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION ALPHANUMERIC IOTOKEN PATH { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION VARIABLE IOTOKEN ALPHANUMERIC { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION VARIABLE IOTOKEN VARIABLE { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION VARIABLE IOTOKEN PATH { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION PATH IOTOKEN ALPHANUMERIC { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION PATH IOTOKEN VARIABLE { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
+	| LS OPTION PATH IOTOKEN PATH { ls_one_opt_one_path($<str>5, $<str>2, $<str>3); }
 	
 	/*ls with 1 path and 1 option*/
 	| LS ALPHANUMERIC OPTION { ls_one_path_one_opt($<str>2,$<str>3); }
 	| LS VARIABLE OPTION	{ ls_one_path_one_opt($<str>2,$<str>3); }
 	| LS PATH OPTION	{ ls_one_path_one_opt($<str>2,$<str>3); }
 	
-	| LS ALPHANUMERIC OPTION IOTOKEN ALPHANUMERIC { printf("ls path option1 > alpha"); }
-	| LS ALPHANUMERIC OPTION IOTOKEN VARIABLE { printf("ls path option1 > variable"); }
-	| LS ALPHANUMERIC OPTION IOTOKEN PATH { printf("ls path option1 > path"); }
-	| LS VARIABLE OPTION IOTOKEN ALPHANUMERIC { printf("ls path option2 > alpha"); }
-	| LS VARIABLE OPTION IOTOKEN VARIABLE { printf("ls path option2 > variable"); }
-	| LS VARIABLE OPTION IOTOKEN PATH { printf("ls path option2 > path"); }
-	| LS PATH OPTION IOTOKEN ALPHANUMERIC { printf("ls path option3 > alpha"); }
-	| LS PATH OPTION IOTOKEN VARIABLE { printf("ls path option3 > variable"); }
-	| LS PATH OPTION IOTOKEN PATH { printf("ls path option3 > path"); }
+	| LS ALPHANUMERIC OPTION IOTOKEN ALPHANUMERIC { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS ALPHANUMERIC OPTION IOTOKEN VARIABLE { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS ALPHANUMERIC OPTION IOTOKEN PATH { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS VARIABLE OPTION IOTOKEN ALPHANUMERIC { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS VARIABLE OPTION IOTOKEN VARIABLE { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS VARIABLE OPTION IOTOKEN PATH { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS PATH OPTION IOTOKEN ALPHANUMERIC { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS PATH OPTION IOTOKEN VARIABLE { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
+	| LS PATH OPTION IOTOKEN PATH { ls_one_opt_one_path($<str>5, $<str>3, $<str>2); }
 	
 	/*ls with 2 paths*/
 	| LS ALPHANUMERIC ALPHANUMERIC { ls_two_path($<str>2, $<str>3); }
